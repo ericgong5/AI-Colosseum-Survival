@@ -220,6 +220,7 @@ class World:
                         dir
                     )
                 )
+
             if not self.check_valid_step(cur_pos, next_pos, dir):
                 raise ValueError(
                     "Not a valid step from {} to {} and put barrier at {}, with max steps = {}".format(
@@ -272,6 +273,7 @@ class World:
                     _ = input()
         return results
 
+
     def check_valid_step(self, start_pos, end_pos, barrier_dir):
         """
         Check if the step the agent takes is valid (reachable and within max steps).
@@ -319,7 +321,7 @@ class World:
                 state_queue.append((next_pos, cur_step + 1))
 
         return is_reached
-
+ 
     def check_endgame(self):
         """
         Check if the game ends and compute the current score of the agents.

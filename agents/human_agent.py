@@ -44,6 +44,7 @@ class HumanAgent(Agent):
             x, y, dir = x.strip(), y.strip(), dir.strip()
             x, y = int(x), int(y)
         my_pos = (x, y)
+
         return my_pos, self.dir_map[dir]
 
     def check_valid_input(self, x, y, dir, x_max, y_max):
